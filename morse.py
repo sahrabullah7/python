@@ -28,3 +28,19 @@ def English_function(string, MORSECODE): #this function converts from morse code
                 raise ValueError(f"The '{letter}' key doesn't exist in the dictionary")  # Raise an error if the Morse code is not in the dictionary    #valueerror:A function receives an argument that is right type but a bad value
         result += " "  # Add space between words after passing on every letter
     return result.strip()  # Remove extra spaces
+
+def choosing_input(): #to make the user chose which translation he wants
+    
+    choice = input("Press 'e' for English to Morse code or 'm' for Morse code to English: ").lower() #the choice   #lower:not to raise an error if the user wrote the choice in capital letter
+
+    # Check the user's choice
+    if choice == "e":
+        string = input("Enter english text: ")
+        print(Morse_function(string, MORSECODE))  # Call the function to convert English to Morse code
+    elif choice == "m":
+        string = input("Enter Morse code text (use '.' for dot and '-' for dash, space between letters and '/' between words): ")
+        print(English_function(string, MORSECODE))  # Call the function to convert Morse code to English
+    else:
+        print("Choose a correct letter.")  # Print an error message for an incorrect choice
+
+choosing_input()
