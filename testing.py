@@ -17,3 +17,13 @@ class TestMorseCodeConversion(unittest.TestCase):
         # Assert that the actual result matches the expected result; otherwise, raise an AssertionError with a custom error message
         self.assertEqual(actual_result, expected_result, f"Expected: {expected_result}\nActual: {actual_result}")
     
+    # Define a test method for converting Morse code to English
+    def test_morse_to_english(self):
+        # Define the expected English result for the input Morse code
+        expected_result = 'HELLO TKH USERS' 
+        
+        # Call the 'English_function' function to convert the Morse code to English
+        actual_result = English_function('.... . .-.. .-.. --- / - -.- .... / ..- ... . .-. ...', MORSECODE)
+        
+        # check that the actual result matches the expected result; otherwise, raise an AssertionError with a custom error message
+        self.assertEqual(actual_result, expected_result, f"Expected: {expected_result}\nActual: {actual_result}")
