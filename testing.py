@@ -27,3 +27,10 @@ class TestMorseCodeConversion(unittest.TestCase):
         
         # check that the actual result matches the expected result; otherwise, raise an AssertionError with a custom error message
         self.assertEqual(actual_result, expected_result, f"Expected: {expected_result}\nActual: {actual_result}")
+
+    # Test that an error is raised for invalid English input
+    def test_invalid_english_to_morse(self):
+
+        with self.assertRaises(ValueError):  
+
+            Morse_function('H3ll0', MORSECODE)  #call a wrong function   #the code will pause if the unknown letter is in the middle or the beginning and it wont continue the rest of the word or sentence
