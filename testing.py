@@ -34,3 +34,10 @@ class TestMorseCodeConversion(unittest.TestCase):
         with self.assertRaises(ValueError):  
 
             Morse_function('H3ll0', MORSECODE)  #call a wrong function   #the code will pause if the unknown letter is in the middle or the beginning and it wont continue the rest of the word or sentence
+
+    # Test that an error is raised for invalid morse code input
+    def test_invalid_morse_to_english(self):
+
+        with self.assertRaises(ValueError):  
+
+            English_function('..../.-/-..---', MORSECODE)   #call a wrong function
