@@ -18,7 +18,7 @@ def Morse_function(string, MORSECODE): #def: what is morsecode    #MORSECODE: fo
 
 def English_function(string, MORSECODE): #this function converts from morse code to english
     morse_words = string.split('/')  # get a massage and split it into seperate words by /
-    result = ""
+    result = ""  #store the results
     for morse_word in morse_words: #to get single word in the sentence
         morse_letters = morse_word.strip().split()  #to split the word into letters  #strip: remove extra spaces
         for letter in morse_letters: #to pass on every letter in the word
